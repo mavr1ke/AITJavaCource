@@ -23,7 +23,7 @@ public class Dog {
         System.out.println("Я перепрыгиваю барьер " + height + " см");
     }
 
-    boolean getBarrier(int barrierHeight){ // 100, 200, 150
+    boolean getBarrier(int barrierHeight){
         if (barrierHeight <= maxJumpHeight && jumpHeight < barrierHeight) {
             while (jumpHeight < barrierHeight){
                 training();
