@@ -43,10 +43,13 @@ public class LessonMain {
 //
 //        barrier = 180;
 //        dog.getBarrier(barrier);
-
+        int countBarriers = 0;
         int[] barriers = {120, 180, 160, 280, 350, 50};
         for (int barrier: barriers) {
-            dog.getBarrier(barrier);
+           if (dog.getBarrier(barrier)) {
+               countBarriers++;
+           }
         }
+        System.out.println("\nКоличетсво перепрыгнутых барьеров: " + countBarriers);
     }
 }
