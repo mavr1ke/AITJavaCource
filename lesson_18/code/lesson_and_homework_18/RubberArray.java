@@ -90,7 +90,7 @@ public class RubberArray {
         if (index < array.length && index >= 0) {
             return array[index];
         } else {
-            return -1;
+            return Integer.MIN_VALUE;
         }
     }
 
