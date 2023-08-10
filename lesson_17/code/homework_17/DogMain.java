@@ -22,7 +22,7 @@ public class DogMain {
         System.out.println("maxJumpHeight " + dog1.maxJumpHeight);
 
         System.out.println("=========== Rax =============");
-        Dog dog = new Dog("Rax", 150);
+        Dog dog = new Dog("Rax", 153);
 
         System.out.println(dog.jumpHeight);
         System.out.println(dog.maxJumpHeight);
@@ -34,12 +34,16 @@ public class DogMain {
 //        dog.getBarrier(barrier);
 
         int countBarriers = 0;
-        int[] barriers = {120, 180, 160, 280, 350, 50};
+        int[] barriers = {120, 180, 160, 280, 350, 50, 304};
         for (int barrier: barriers) {
            if (dog.getBarrier(barrier)) {
                countBarriers++;
            }
         }
         System.out.println("\nКоличетсво перепрыгнутых барьеров: " + countBarriers);
+
+        // массивы обьетков
+        Dog[] dogs = new Dog[3];
+        Dog[] dogs2 = {new Dog("rax", 24), new Dog("lol", 242)};
     }
 }

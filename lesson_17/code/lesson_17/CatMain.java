@@ -1,4 +1,4 @@
-package lesson17;
+package lesson_17;
 
 public class CatMain {
     public static void main(String[] args) {

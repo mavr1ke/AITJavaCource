@@ -5,6 +5,8 @@ public class Dog {
     int jumpHeight;
     int maxJumpHeight;
 
+    int increaseByTraining = 10;
+
     public Dog(String name, int jumpHeight) {
         this.name = name;
         this.jumpHeight = jumpHeight;
@@ -43,10 +45,13 @@ public class Dog {
 
     void training() {
         System.out.println("start training");
-        if (jumpHeight + 10 <= maxJumpHeight) { // 50 -> 100 -> x <= 100 - 10 (90)
-            jumpHeight += 10;
+        if (jumpHeight + increaseByTraining <= maxJumpHeight) { // 50 -> 100 -> x <= 100 - 10 (90)
+            jumpHeight += increaseByTraining;
             System.out.println("Я потренировался!");
             whoAmI();
+        } else if (maxJumpHeight - jumpHeight < increaseByTraining) {
+            System.out.println("Small training start");
+            jumpHeight = maxJumpHeight;
         } else {
             System.out.println("Больше натренировать не могу, сорян!");
         }

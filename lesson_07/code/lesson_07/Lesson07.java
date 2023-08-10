@@ -1,7 +1,4 @@
-package lesson07;
-
-import java.util.Locale;
-import java.util.Scanner;
+package lesson_07;
 
 public class Lesson07 {
     public static void main(String[] args) {

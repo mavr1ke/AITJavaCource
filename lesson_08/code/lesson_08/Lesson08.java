@@ -1,4 +1,4 @@
-package lesson08;
+package lesson_08;
 
 import java.util.Random;
 import java.util.Scanner;
