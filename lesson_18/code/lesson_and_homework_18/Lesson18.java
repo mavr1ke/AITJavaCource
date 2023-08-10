@@ -59,6 +59,8 @@ public class Lesson18 {
         int[] ints = {1, 2, 3, 4, 5, 6, 7, 8, 9};
         RubberArray rubberArray = new RubberArray(ints);
         rubberArray.printArray();
+        ints[0] = 1000;
+        rubberArray.printArray();
 
         rubberArray.replaceByIndex(2,5);
         System.out.println("Replace by index 2 to value 5:");

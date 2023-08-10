@@ -11,7 +11,7 @@ public class RubberArray {
     }
 
     public RubberArray(int[] array) {
-        this.array = array;
+        this.array =  Arrays.copyOf(array, array.length + 1);
     }
 
     public void add(int value) {
