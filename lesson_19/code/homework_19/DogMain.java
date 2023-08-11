@@ -1,4 +1,4 @@
-package homework_17;
+package homework_19;
 
 public class DogMain {
     public static void main(String[] args) {
@@ -10,6 +10,12 @@ public class DogMain {
        Максимальная высота, которую может натренировать собака не может быть больше, чем 2раза высоту первоначального прыжка.
 
         */
+        Dog max = new Dog("Name",0);
+        max.setName("Max");
+        max.setJumpHeight(80);
+        System.out.println(max.getName());
+        System.out.println(max.getJumpHeight());
+        max.jump();
 
         Dog dog1 = new Dog("Barbos", 50);
 
@@ -18,14 +24,14 @@ public class DogMain {
         }
 
         System.out.println("=============");
-        System.out.println("jumpHeight " + dog1.jumpHeight);
-        System.out.println("maxJumpHeight " + dog1.maxJumpHeight);
+//        System.out.println("jumpHeight " + dog1.jumpHeight);
+//        System.out.println("maxJumpHeight " + dog1.maxJumpHeight);
 
         System.out.println("=========== Rax =============");
         Dog dog = new Dog("Rax", 153);
 
-        System.out.println(dog.jumpHeight);
-        System.out.println(dog.maxJumpHeight);
+//        System.out.println(dog.jumpHeight);
+//        System.out.println(dog.maxJumpHeight);
 
 //        int barrier = 120;
 //        dog.getBarrier(barrier);
@@ -43,7 +49,7 @@ public class DogMain {
         System.out.println("\nКоличетсво перепрыгнутых барьеров: " + countBarriers);
 
         // массивы обьетков
-        Dog[] dogs = new Dog[3];
-        Dog[] dogs2 = {new Dog("rax", 24), new Dog("lol", 242)};
+//        Dog[] dogs = new Dog[3];
+//        Dog[] dogs2 = {new Dog("rax", 24), new Dog("lol", 242)};
     }
 }

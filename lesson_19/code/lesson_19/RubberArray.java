@@ -1,10 +1,10 @@
-package lesson_and_homework_18;
+package lesson_19;
 
 import java.util.Arrays;
 
 public class RubberArray {
 
-    int[] array;
+    private int[] array;
 
     public RubberArray() {
         this.array = new int[0];
@@ -26,7 +26,7 @@ public class RubberArray {
         }
     }
 
-    public void extractArray() {
+    private void extractArray() {
         array = Arrays.copyOf(array, array.length + 1);
     }
 
@@ -119,11 +119,21 @@ public class RubberArray {
         }
     }
 
-    public void deleteByValue(int value) {
+    public boolean deleteByValue(int value) {
         int delIndex = searchByValue(value);
         if (delIndex >= 0) {
             deleteByIndex(delIndex);
+            return true;
         }
+        return false;
+    }
+
+    public int deleteAllByValue(int value) {
+        int count = 0;
+        while (deleteByValue(value)) {
+            count++;
+        }
+        return count;
     }
 
     public void replaceByIndex(int index, int newValue) {
@@ -135,7 +145,7 @@ public class RubberArray {
     public void replaceByValue(int oldValue, int newValue) {
         int replaceIndex = searchByValue(oldValue);
         if (replaceIndex >= 0) {
-            replaceByIndex(replaceIndex,newValue);
+            replaceByIndex(replaceIndex, newValue);
         }
     }
 }

@@ -1,16 +1,37 @@
-package homework_17;
+package homework_19;
 
 public class Dog {
-    String name;
-    int jumpHeight;
-    int maxJumpHeight;
+    private String name;
+    private int jumpHeight;
+    private final int maxJumpHeight;
 
-    int increaseByTraining = 10;
+    private final int increaseByTraining;
+
+    {
+        increaseByTraining = 10;
+    }
 
     public Dog(String name, int jumpHeight) {
-        this.name = name;
-        this.jumpHeight = jumpHeight;
+        setName(name);
+        setJumpHeight(jumpHeight);
         this.maxJumpHeight = jumpHeight * 2;
+    }
+
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getJumpHeight() {
+        return jumpHeight;
+    }
+
+    public void setJumpHeight(int jumpHeight) {
+        this.jumpHeight = jumpHeight;
     }
 
     void whoAmI() {
