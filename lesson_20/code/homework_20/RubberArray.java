@@ -6,7 +6,7 @@ public class RubberArray {
 
     private int[] array;
 
-    int cursor;
+    private int cursor;
 
     public static final int MULTIPLIER = 2;
 

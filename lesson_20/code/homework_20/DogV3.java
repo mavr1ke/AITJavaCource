@@ -11,7 +11,11 @@ public class DogV3 {
     public DogV3(String name, int jumpHeight) {
         setName(name);
         setJumpHeight(jumpHeight);
-        this.maxJumpHeight = jumpHeight * 2;
+        this.maxJumpHeight = coefficientMaxJumpHeight(jumpHeight);
+    }
+
+    private int coefficientMaxJumpHeight(int jumpHeight) {
+        return jumpHeight * 2;
     }
 
     public String getName() {
