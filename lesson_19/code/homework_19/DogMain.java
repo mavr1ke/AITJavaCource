@@ -15,7 +15,6 @@ public class DogMain {
         max.setJumpHeight(80);
         System.out.println(max.getName());
         System.out.println(max.getJumpHeight());
-        max.jump();
 
         Dog dog1 = new Dog("Barbos", 50);
 
