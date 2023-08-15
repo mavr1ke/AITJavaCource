@@ -6,6 +6,8 @@ public class DogV3 {
     private final int maxJumpHeight;
     public static final int INCREASE = 10;
 
+    public static final int MULTIPLIER = 2;
+
     private static int barrierCount;
 
     public DogV3(String name, int jumpHeight) {
@@ -15,7 +17,7 @@ public class DogV3 {
     }
 
     private int coefficientMaxJumpHeight(int jumpHeight) {
-        return jumpHeight * 2;
+        return jumpHeight * MULTIPLIER;
     }
 
     public String getName() {
