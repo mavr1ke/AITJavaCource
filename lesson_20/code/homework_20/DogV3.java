@@ -8,7 +8,7 @@ public class DogV3 {
 
     public static final int MULTIPLIER = 2;
 
-    private static int barrierCount;
+    private static int totalBarrierCount;
 
     public DogV3(String name, int jumpHeight) {
         setName(name);
@@ -57,7 +57,7 @@ public class DogV3 {
 
         if (jumpHeight >= barrierHeight) {
             jump(barrierHeight);
-            barrierCount++;
+            totalBarrierCount++;
         } else {
             System.out.println("I cant get barrier with height: " + barrierHeight);
             return false;
@@ -83,6 +83,6 @@ public class DogV3 {
     }
 
     public static void ShowBarrierCount() {
-        System.out.println("\nAll dogs jumped: " + barrierCount + " times");
+        System.out.println("\nAll dogs jumped: " + totalBarrierCount + " times");
     }
 }
