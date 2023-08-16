@@ -2,10 +2,8 @@
 out/
 !**/src/main/**/out/
 !**/src/test/**/out/
-
 .idea/
-.out/
-.src/
+src/
 *.iml
 
 ### Eclipse ###
