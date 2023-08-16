@@ -120,8 +120,15 @@ public class ArraysUtilities {
     public static void printArray(int[] array) {
         System.out.print("[");
         for (int i = 0; i < array.length;i++) {
-            System.out.print(array[i] + ((array.length - 1 > i) ? ", " : ""));
+            System.out.print(array[i] + ((array.length - 1 > i) ? ", " : "]\n"));
         }
-        System.out.print("]\n");
+    }
+
+    public static String toString(int[] array) {
+        String result = "[";
+        for (int i = 0; i < array.length;i++) {
+           result += array[i] + ((array.length - 1 > i) ? ", " : "]");
+        }
+        return result;
     }
 }

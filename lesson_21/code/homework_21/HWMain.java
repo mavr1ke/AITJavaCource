@@ -21,5 +21,8 @@ public class HWMain {
         numberForSearch = 88;
         int idx = ArraysUtilities.binarySearch(ints, numberForSearch);
         System.out.println("Index of number " + numberForSearch + " = " + idx);
+
+        System.out.println("toString\n" + ArraysUtilities.toString(ints));
+
     }
 }
