@@ -14,6 +14,6 @@ public class MainPersons {
         Passenger passenger1 = new Passenger("Stella");
         passenger1.setHaveSpecialRequirements(true);
 
-        System.out.println(passenger1.toString() + "\nhave special requirement: " + passenger1.isHaveSpecialRequirements());
+        System.out.println(passenger1 + "\nhave special requirement: " + passenger1.isHaveSpecialRequirements());
     }
 }

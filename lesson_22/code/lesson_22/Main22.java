@@ -19,15 +19,15 @@ public class Main22 {
         Car car = new Car("Polo", 2011);
         System.out.println(car.getModel());
         System.out.println(car.getYearOfManufacture());
-        System.out.println(car.toString());
+        System.out.println(car);
         car.gas();
         car.breaking();
 
         car.goToRoute(1000);
-        System.out.println(car.toString() + " Now mileage is: " + car.getMileage());
+        System.out.println(car + " Now mileage is: " + car.getMileage());
 
         Bus bus = new Bus("Splinter", 2000,50);
-        System.out.println(bus.toString());
+        System.out.println(bus);
 
         bus.gas();
         bus.goToRoute(150);
