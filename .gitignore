@@ -1,5 +1,6 @@
 .idea/
 out/
+.idea/
 src/
-*.iml
+Lessons.iml
 .DS_Store
