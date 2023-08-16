@@ -29,6 +29,7 @@
       <sourceFolder url="file://$MODULE_DIR$/test/test" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/lesson_02/code/homework_02/code" />
       <excludeFolder url="file://$MODULE_DIR$/src" />
+      <excludeFolder url="file://$MODULE_DIR$/lesson_01/.idea" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
