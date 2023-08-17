@@ -29,7 +29,6 @@ public class Main23 {
         System.out.println("\n***Task 2***\n");
         busDriver.removeCategory("D");
         busDriver.removeCategory("B");
-        busDriver.searchCategory("B");
         System.out.println(busDriver.addCategory("D"));
         System.out.println(busDriver.addCategory(""));
         System.out.println(busDriver.addCategory("B"));

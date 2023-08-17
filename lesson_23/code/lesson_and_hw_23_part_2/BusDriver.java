@@ -38,7 +38,7 @@ public class BusDriver {
             return false;
     }
 
-    public int searchCategory(String category){
+    private int searchCategory(String category){
         for (int i = 0; i < categories.length; i++) {
             if (categories[i].equals(category)) {
                 return i;
