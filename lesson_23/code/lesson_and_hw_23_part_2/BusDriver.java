@@ -29,26 +29,28 @@ public class BusDriver {
         return categories;
     }
 
-    public void addCategory(String category) {
+    public boolean addCategory(String category) {
         if (category.length() > 0) {
             categories = Arrays.copyOf(categories, categories.length + 1);
             categories[categories.length - 1] = category.trim();
-            System.out.println("Category added");
+            return true;
         } else
-            System.out.println("Empty category");
+            return false;
     }
 
+    public int searchCategory(String category){
+        for (int i = 0; i < categories.length; i++) {
+            if (categories[i].equals(category)) {
+                return i;
+            }
+        }
+        return -1;
+    }
     public void removeCategory(String category) {
         if (category.length() > 0 && categories.length >= 1) {
-            int indexOfCategory = -1;
-            for (int i = 0; i < categories.length; i++) {
-                if (categories[i].equals(category)) {
-                    indexOfCategory = i;
-                    break;
-                }
-            }
-            if (indexOfCategory >= 0) {
-                for (int i = indexOfCategory; i < categories.length - 1; i++) {
+            int delIndex = searchCategory(category);
+            if (delIndex >= 0) {
+                for (int i = delIndex; i < categories.length - 1; i++) {
                     categories[i] = categories[i + 1];
                 }
             } else {
