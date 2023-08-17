@@ -7,8 +7,8 @@ public class Parrot extends HomeAnimal {
 
     public Parrot(String name, byte age, String color, String type) {
         super(name, age);
-        setColor(color);
-        setType(type);
+        this.color = color;
+        this.type = type;
     }
 
     public String getColor() {

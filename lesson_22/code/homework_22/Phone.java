@@ -7,8 +7,8 @@ public class Phone extends Device {
 
     public Phone(String model, float price, boolean isSensor, byte cameraResolution) {
         super(model, price);
-        setSensor(isSensor);
-        setCameraResolution(cameraResolution);
+        this.isSensor = isSensor;
+        this.cameraResolution = cameraResolution;
     }
 
     public boolean isSensor() {

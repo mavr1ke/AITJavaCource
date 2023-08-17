@@ -7,8 +7,8 @@ public class Cat extends HomeAnimal{
 
     public Cat(String name, byte age, boolean isWoolen, boolean isLazy) {
         super(name, age);
-        setWoolen(isWoolen);
-        setLazy(isLazy);
+        this.isWoolen = isWoolen;
+        this.isLazy = isLazy;
     }
 
     public boolean isWoolen() {

@@ -7,8 +7,8 @@ public class Laptop extends Device {
 
     public Laptop(String model, float price, String graphicCard, boolean diskDrive) {
         super(model, price);
-        setGraphicCard(graphicCard);
-        setDiskDrive(diskDrive);
+        this.graphicCard = graphicCard;
+        this.diskDrive = diskDrive;
     }
 
     public String getGraphicCard() {
