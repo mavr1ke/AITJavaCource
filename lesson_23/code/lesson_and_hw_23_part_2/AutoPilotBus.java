@@ -1,4 +1,4 @@
-package homework_23;
+package lesson_and_hw_23_part_2;
 
 public class AutoPilotBus {
 

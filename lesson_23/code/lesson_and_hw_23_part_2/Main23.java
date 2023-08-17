@@ -1,8 +1,9 @@
-package lesson_23;
+package lesson_and_hw_23_part_2;
 
 public class Main23 {
     public static void main(String[] args) {
 
+        System.out.println("\n***Task 0***\n");
         Bus bus = new Bus("Sprinter", 20);
         System.out.println(bus);
 
@@ -25,5 +26,13 @@ public class Main23 {
         bus.moveByAutopilot();
         bus.moveByDriver();
 
+        System.out.println("\n***Task 2***\n");
+        busDriver.removeCategory("D");
+        busDriver.removeCategory("B");
+        busDriver.addCategory("D");
+        busDriver.addCategory("");
+        busDriver.addCategory("B");
+        System.out.println(busDriver);
+        System.out.println(bus);
     }
 }
