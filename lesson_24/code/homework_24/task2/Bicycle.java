@@ -12,7 +12,7 @@ public class Bicycle extends Vehicle{
 
     @Override
     public void setEngine(Engine engine) {
-        System.out.println("Nothing to start here");
+        System.out.println("I don't have space for an engine");
     }
 
     public String toString() {
