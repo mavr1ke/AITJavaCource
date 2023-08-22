@@ -1,4 +1,4 @@
-package lesson_26.pizza_factory;
+package homework_26.pizza_factory;
 
 public class Salami extends Pizza{
     private final static String TYPE = "Pizza Salami";
