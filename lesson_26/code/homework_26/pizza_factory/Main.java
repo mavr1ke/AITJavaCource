@@ -46,7 +46,7 @@ public class Main {
             wantMorePizza = moreChoice.equalsIgnoreCase("yes");
         } while (wantMorePizza);
 
-
+        System.out.println("Thanks for order");
     }
 
 
