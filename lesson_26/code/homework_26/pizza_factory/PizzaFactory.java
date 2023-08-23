@@ -4,20 +4,15 @@ public class PizzaFactory {
 
 
     public Pizza orderPizza(String type) {
-        Pizza pizza;
         switch (type) {
             case "1":
-                pizza = new Hawaii();
-                break;
+                return new Hawaii();
             case "2":
-                pizza = new Salami();
-                break;
+                return new Salami();
             case "3":
-                pizza = new Mozzarella();
-                break;
+                return new Mozzarella();
             default:
-                pizza = null;
+                return null;
         }
-        return pizza;
     }
 }
