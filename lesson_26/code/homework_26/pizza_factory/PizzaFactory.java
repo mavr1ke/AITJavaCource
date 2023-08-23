@@ -6,9 +6,9 @@ public class PizzaFactory {
     public Pizza orderPizza(String type) {
         Pizza pizza;
         switch(type) {
-            case "Hawaii": pizza = new Hawaii(); break;
-            case "Salami": pizza = new Salami(); break;
-            case "Mozzarella": pizza = new Mozzarella(); break;
+            case "1": pizza = new Hawaii(); break;
+            case "2": pizza = new Salami(); break;
+            case "3": pizza = new Mozzarella(); break;
             default: pizza = null;
         }
         return pizza;

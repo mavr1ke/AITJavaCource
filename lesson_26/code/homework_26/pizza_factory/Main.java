@@ -26,20 +26,25 @@ public class Main {
 */
         PizzaFactory pizzaFactory = new PizzaFactory();
         Scanner scanner = new Scanner(System.in);
+        boolean wantMorePizza;
+        do {
+            System.out.println("Choose number of pizza you want (1 - Hawaii, 2 - Salami, 3 - Mozzarella):");
+            String chosenType = scanner.nextLine();
 
-        System.out.println("Выберите тип пиццы (Hawaii, Salami, Mozzarella):");
-        String chosenType = scanner.nextLine();
-
-        switch (chosenType.toLowerCase()) {
-            case "hawaii":
-            case "salami":
-            case "mozzarella":
-                Pizza pizza = pizzaFactory.orderPizza(chosenType);
-                pizza.orderPizza();
-                break;
-            default:
-                System.out.println("Некорректный выбор. Пожалуйста, выберите из предложенных вариантов.");
-        }
+            switch (chosenType) {
+                case "1":
+                case "2":
+                case "3":
+                    Pizza pizza = pizzaFactory.orderPizza(chosenType);
+                    pizza.orderPizza();
+                    break;
+                default:
+                    System.out.println("Uncorrected input. Please, choose from suggested options.");
+            }
+            System.out.println("You want more pizza (yes/no)");
+            String moreChoice = scanner.nextLine();
+            wantMorePizza = moreChoice.equalsIgnoreCase("yes");
+        } while (wantMorePizza);
 
 
     }
