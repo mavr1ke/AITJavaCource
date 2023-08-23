@@ -1,8 +1,9 @@
 package homework_26.pizza_factory;
 
-public class Mozzarella extends Pizza{
+public class Mozzarella extends Pizza {
 
     private final static String TYPE = "Pizza Mozzarella";
+
     public Mozzarella() {
         super(TYPE);
     }

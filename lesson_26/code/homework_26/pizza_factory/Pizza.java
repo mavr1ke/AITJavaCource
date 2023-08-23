@@ -5,7 +5,7 @@ public abstract class Pizza {
     private final String type;
 
     public Pizza(String type) {
-         this.type = type;
+        this.type = type;
     }
 
     protected abstract void prepare();
@@ -17,6 +17,7 @@ public abstract class Pizza {
     private void pack() {
         System.out.println("Packing " + type);
     }
+
     public void orderPizza() {
         prepare();
         bake();

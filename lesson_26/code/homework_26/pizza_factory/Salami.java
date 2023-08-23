@@ -1,7 +1,8 @@
 package homework_26.pizza_factory;
 
-public class Salami extends Pizza{
+public class Salami extends Pizza {
     private final static String TYPE = "Pizza Salami";
+
     public Salami() {
         super(TYPE);
     }
