@@ -22,6 +22,5 @@ public abstract class Pizza {
         prepare();
         bake();
         pack();
-        System.out.println("Your pizza is done");
     }
 }

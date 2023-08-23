@@ -26,7 +26,6 @@ public class Main {
 */
         PizzaFactory pizzaFactory = new PizzaFactory();
         Scanner scanner = new Scanner(System.in);
-        boolean wantMorePizza;
         do {
             System.out.println("Choose number of pizza you want (1 - Hawaii, 2 - Salami, 3 - Mozzarella):");
             String chosenType = scanner.nextLine();
@@ -42,9 +41,7 @@ public class Main {
                     System.out.println("Uncorrected input. Please, choose from suggested options.");
             }
             System.out.println("You want more pizza (yes/no)");
-            String moreChoice = scanner.nextLine();
-            wantMorePizza = moreChoice.equalsIgnoreCase("yes");
-        } while (wantMorePizza);
+        } while (scanner.nextLine().equalsIgnoreCase("yes"));
 
         System.out.println("Thanks for order");
     }
