@@ -1,9 +1,6 @@
 package lesson_and_hw27.garden_project;
 
 public class Garden {
-    public void growPlants(Plant[] plants) {
-        growPlants(plants,1);
-    }
 
     public void growPlants(Plant[] plants, int years) {
         System.out.println("Growing plants for "
