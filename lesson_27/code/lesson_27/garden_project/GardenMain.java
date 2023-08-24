@@ -52,12 +52,13 @@ public class GardenMain {
     public static void main(String[] args) {
 
         System.out.println("\n**********\n");
+        int years = 3;
         Garden garden = new Garden();
         Plant[] plants = new Plant[2];
-        plants[0] = new Tree("oak", 100, 3);
-        plants[1] = new Flower("rose", 50, 3);
+        plants[0] = new Tree("oak", 100, years);
+        plants[1] = new Flower("rose", 50, years);
 
-        garden.growPlants(plants, 3);
+        garden.growPlants(plants, 2);
 
     }
 }

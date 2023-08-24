@@ -47,4 +47,11 @@ public abstract class Plant {
     public void doWinter() {
         System.out.println(getName() + " is not growing in Winter - " + getHeight());
     }
+
+    public void seasonsForYear() {
+        doSpring();
+        doSummer();
+        doAutumn();
+        doWinter();
+    }
 }

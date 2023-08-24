@@ -2,25 +2,16 @@ package lesson_27.garden_project;
 
 public class Garden {
     public void growPlants(Plant[] plants) {
-        for (Plant plant: plants) {
-            plant.doSpring();
-            plant.doSummer();
-            plant.doAutumn();
-            plant.doWinter();
-            System.out.println(plant.getName() + " has height "
-                    + plant.getHeight() + " and is "
-                    + plant.getAge() + " years old\n");
-        }
+        growPlants(plants,1);
     }
 
     public void growPlants(Plant[] plants, int years) {
+        System.out.println("Growing plants for "
+                + years + ((years > 1) ? " years" : " year") + "\n");
         int yearsCounter = 0;
         do {
             for (Plant plant : plants) {
-                plant.doSpring();
-                plant.doSummer();
-                plant.doAutumn();
-                plant.doWinter();
+                plant.seasonsForYear();
             }
             System.out.println();
             yearsCounter++;
@@ -32,5 +23,4 @@ public class Garden {
                     + plant.getAge() + " years old");
         }
     }
-
 }
