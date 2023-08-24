@@ -1,4 +1,4 @@
-package lesson_27.garden_project;
+package lesson_and_hw27.garden_project;
 
 public class GardenMain {
     /*
