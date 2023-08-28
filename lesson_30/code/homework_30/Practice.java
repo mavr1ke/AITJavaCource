@@ -5,6 +5,7 @@ import java.util.Arrays;
 public class Practice {
 
     public static String mySubstring(String string, int startIndex, int endIndex) {
+        //O(n)
         if (startIndex < 0 || endIndex < 0 || startIndex >= endIndex || string == null) {
             return "error";
         }
@@ -16,6 +17,7 @@ public class Practice {
     }
 
     public static boolean isAnagramsV1(String string, String string2) {
+        //O(n)
         if (string.length() != string2.length() || string.length() == 0) {
             return false;
         }
@@ -28,6 +30,7 @@ public class Practice {
     }
 
     public static boolean isAnagramsV2(String string, String string2) {
+        //O(1)
         if (string.length() != string2.length() || string.length() == 0) {
             return false;
         }
