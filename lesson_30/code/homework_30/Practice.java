@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class Practice {
 
     public static String mySubstring(String string, int startIndex, int endIndex) {
-        //O(n)
+        // O(n)
         if (startIndex < 0 || endIndex < 0 || startIndex >= endIndex || string == null) {
             return "error";
         }
@@ -17,7 +17,7 @@ public class Practice {
     }
 
     public static boolean isAnagramsV1(String string, String string2) {
-        //O(n)
+        // O(n)
         if (string.length() != string2.length() || string.length() == 0) {
             return false;
         }
@@ -41,17 +41,24 @@ public class Practice {
         return Arrays.equals(chArray, chArray2);
     }
 
-//    public static boolean isAnagramsV3(String string, String string2) {
-//        if (string.length() != string2.length() || string.length() == 0) {
-//            return false;
-//        }
-//        char[] chArray = new char[string.length()];
-//        for (int i = 0; i < string.length();i++) {
-//            chArray[i] = string.charAt(i);
-//        }
-//        System.out.println(chArray);
-//        return true;
-//    }
+    public static boolean isAnagramsV3(String string, String string2) {
+        // O(n)
+        if (string.length() != string2.length() || string.length() == 0) {
+            return false;
+        }
+        char[] chArray = new char[256];
+        for (int i = 0; i < string.length();i++) {
+            chArray[string.charAt(i)]++;
+            chArray[string.charAt(i)]--;
+        }
+
+        for (int count: chArray) {
+            if (count != 0) {
+                return false;
+            }
+        }
+        return true;
+    }
 
     public static void main(String[] args) {
 
@@ -64,7 +71,7 @@ public class Practice {
         String str2 = "cba";
         System.out.println("str1 and str2 is anagram v1: " + isAnagramsV1(str1, str2));
         System.out.println("str1 and str2 is anagram v2: " + isAnagramsV2(str1, str2));
-        //System.out.println("str1 and str2 is anagram v3: " + isAnagramsV3(str1, str2));
+        System.out.println("str1 and str2 is anagram v3: " + isAnagramsV3(str1, str2));
 
         //Task 2
         /*
