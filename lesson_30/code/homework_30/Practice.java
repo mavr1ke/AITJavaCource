@@ -30,7 +30,7 @@ public class Practice {
     }
 
     public static boolean isAnagramsV2(String string, String string2) {
-        //O(1)
+        // O(n * log n)
         if (string.length() != string2.length() || string.length() == 0) {
             return false;
         }
