@@ -49,7 +49,7 @@ public class Practice {
         char[] chArray = new char[256];
         for (int i = 0; i < string.length();i++) {
             chArray[string.charAt(i)]++;
-            chArray[string.charAt(i)]--;
+            chArray[string2.charAt(i)]--;
         }
 
         for (int count: chArray) {
