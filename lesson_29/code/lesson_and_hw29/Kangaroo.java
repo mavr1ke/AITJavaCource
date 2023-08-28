@@ -1,4 +1,4 @@
-package lesson_29;
+package lesson_and_hw29;
 
 public class Kangaroo implements Movable{
     @Override
