@@ -53,9 +53,13 @@ public class Practice {
         //Task 2
         /*
         f(n) = 9n + 73 -> 9n | f(n) = n
+
         f(n) = 235 -> 1 | f(n) = 1
+
         f(n) = n^2 + 7n + 123 -> n^2 + 7n -> n^2 | f(n) = n^2
+
         f(n) = n^3 + 2000n + 8765 -> n^3 + 2000n -> n^3 | f(n) = n^3
+
         f(n) = n + sqrt(n) -> n | f(n) = n
         */
 
