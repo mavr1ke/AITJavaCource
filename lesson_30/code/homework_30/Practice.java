@@ -30,7 +30,7 @@ public class Practice {
     }
 
     public static boolean isAnagramsV2(String string, String string2) {
-        // O(n * log n)
+        // O(log n)
         if (string.length() != string2.length() || string.length() == 0) {
             return false;
         }
@@ -40,6 +40,18 @@ public class Practice {
         Arrays.sort(chArray2);
         return Arrays.equals(chArray, chArray2);
     }
+
+//    public static boolean isAnagramsV3(String string, String string2) {
+//        if (string.length() != string2.length() || string.length() == 0) {
+//            return false;
+//        }
+//        char[] chArray = new char[string.length()];
+//        for (int i = 0; i < string.length();i++) {
+//            chArray[i] = string.charAt(i);
+//        }
+//        System.out.println(chArray);
+//        return true;
+//    }
 
     public static void main(String[] args) {
 
@@ -52,6 +64,7 @@ public class Practice {
         String str2 = "cba";
         System.out.println("str1 and str2 is anagram v1: " + isAnagramsV1(str1, str2));
         System.out.println("str1 and str2 is anagram v2: " + isAnagramsV2(str1, str2));
+        //System.out.println("str1 and str2 is anagram v3: " + isAnagramsV3(str1, str2));
 
         //Task 2
         /*
