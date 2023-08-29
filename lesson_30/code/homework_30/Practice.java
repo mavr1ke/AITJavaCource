@@ -17,12 +17,27 @@ public class Practice {
     }
 
     public static boolean isAnagramsV1(String string, String string2) {
-        // O(n)
+        // O(n^2)
         if (string.length() != string2.length() || string.length() == 0) {
             return false;
         }
+
         for (int i = 0; i < string.length(); i++) {
-            if (string.indexOf(string2.charAt(i)) == -1) {
+            char currentChar = string.charAt(i);
+
+            int countInString1 = 0;
+            int countInString2 = 0;
+
+            for (int j = 0; j < string.length(); j++) {
+                if (string.charAt(j) == currentChar) {
+                    countInString1++;
+                }
+                if (string2.charAt(j) == currentChar) {
+                    countInString2++;
+                }
+            }
+
+            if (countInString1 != countInString2) {
                 return false;
             }
         }
@@ -67,8 +82,8 @@ public class Practice {
         System.out.println("String: " + str);
         System.out.println("str substring from 0 to 7: " + mySubstring(str, 0, 7));
 
-        String str1 = "abc";
-        String str2 = "cba";
+        String str1 = "aba";
+        String str2 = "abb";
         System.out.println("str1 and str2 is anagram v1: " + isAnagramsV1(str1, str2));
         System.out.println("str1 and str2 is anagram v2: " + isAnagramsV2(str1, str2));
         System.out.println("str1 and str2 is anagram v3: " + isAnagramsV3(str1, str2));
