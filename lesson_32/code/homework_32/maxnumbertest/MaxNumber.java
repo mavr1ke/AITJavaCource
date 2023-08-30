@@ -1,4 +1,4 @@
-package homework_32;
+package homework_32.maxnumbertest;
 
 public class MaxNumber {
 
