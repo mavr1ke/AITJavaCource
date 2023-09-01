@@ -2,9 +2,9 @@ package homework_33.animals;
 
 public class Animal {
 
-    String name;
-    int weight;
-    String color;
+    private final String name;
+    private final int weight;
+    private final String color;
 
     public Animal(String name, int weight, String color) {
         this.name = name;
@@ -19,5 +19,13 @@ public class Animal {
 
     public String getName() {
         return name;
+    }
+
+    public int getWeight() {
+        return weight;
+    }
+
+    public String getColor() {
+        return color;
     }
 }

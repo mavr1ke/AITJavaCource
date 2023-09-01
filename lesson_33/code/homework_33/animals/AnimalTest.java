@@ -15,10 +15,10 @@ class AnimalTest {
     Animal animal4 = new Animal("Wolf", 13, "Gray");
     Animal animal5 = new Animal("Fox", 5, "Orange");
 
+    Animal[] actual = {animal1, animal2, animal3, animal4, animal5};
     @Test
     @DisplayName("Sort of animal array by name test")
     public void sortedByName_test() {
-        Animal[] actual = {animal1, animal2, animal3, animal4, animal5};
         Animal[] expected = {animal1, animal2, animal3, animal5, animal4};
         Arrays.sort(actual, new AnimalNameComparator());
         assertArrayEquals(expected, actual);
@@ -27,7 +27,8 @@ class AnimalTest {
     @Test
     @DisplayName("Sort of animal array by weight test")
     public void sortedByWeight_test() {
-        Animal[] actual = {animal1, animal2, animal3, animal4, animal5};
+//        AnimalWeightComparator animalWeightComparator = new AnimalWeightComparator();
+//        assertFalse(animalWeightComparator.compare(animal1,animal2) > 0);
         Animal[] expected = {animal1, animal5, animal4, animal2, animal3};
         Arrays.sort(actual, new AnimalWeightComparator());
         assertArrayEquals(expected, actual);
@@ -36,7 +37,6 @@ class AnimalTest {
     @Test
     @DisplayName("Sort of animal array by color test")
     public void sortedByColor_test() {
-        Animal[] actual = {animal1, animal2, animal3, animal4, animal5};
         Animal[] expected = {animal3, animal2, animal1, animal4, animal5};
         Arrays.sort(actual, new AnimalColorComparator());
         assertArrayEquals(expected, actual);
@@ -45,7 +45,6 @@ class AnimalTest {
     @Test
     @DisplayName("Sort of animal array by last letter in name test")
     public void sortedByLastLetterInName_test() {
-        Animal[] actual = {animal1, animal2, animal3, animal4, animal5};
         Animal[] expected = {animal1, animal4, animal2, animal3, animal5};
         Arrays.sort(actual, new LastAnimalNameLetterComparator());
         assertArrayEquals(expected, actual);
