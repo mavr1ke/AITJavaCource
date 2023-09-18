@@ -54,12 +54,9 @@ public class Auto implements Comparable<Auto>{
 
         for (Auto auto : autos) {
             String brand = auto.getBrand();
-            Set<Auto> setAuto = mapAuto.get(brand);
-            if (setAuto == null) {
-                setAuto = new TreeSet<>();
-                mapAuto.put(brand,setAuto);
-            }
+            Set<Auto> setAuto = mapAuto.getOrDefault(brand, new TreeSet<>());
             setAuto.add(auto);
+            mapAuto.put(brand, setAuto);
         }
         return mapAuto;
     }
