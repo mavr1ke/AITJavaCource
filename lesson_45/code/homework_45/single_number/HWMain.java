@@ -10,7 +10,7 @@ public class HWMain {
         Map<Integer, Integer> countMap = new HashMap<>();
 
         for (int num : numbers) {
-            countMap.merge(num, 1, (oldValue, newValue) -> oldValue + newValue);
+            countMap.merge(num, 1, (oldValue, newValue) -> oldValue + 1);
         }
         for (Map.Entry<Integer, Integer> entry : countMap.entrySet()) {
             if (entry.getValue() % 2 != 0) {
