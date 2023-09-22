@@ -17,7 +17,7 @@ public class DayOfWeekResolver {
         try {
             return DayOfWeek.valueOf(day.toUpperCase());
         } catch (IllegalArgumentException e) {
-            throw new IllegalArgumentException("Incorrect day of the week: " + day, e);
+            throw new IllegalArgumentException("Incorrect day of the week: " + day);
         }
     }
 
