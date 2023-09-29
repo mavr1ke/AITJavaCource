@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class Person implements Comparable<Person>{
+public class Person implements Comparable<Person> {
 
         /*3. Пусть есть текстовый файл такого вида:
         Peter,35
@@ -51,7 +51,7 @@ public class Person implements Comparable<Person>{
         return personsList;
     }
 
-    public static void writePersonsToFileAndPrint(List<Person> persons,File file) throws IOException{
+    public static void writePersonsToFileAndPrint(List<Person> persons, File file) throws IOException {
         BufferedWriter writer = new BufferedWriter(new FileWriter(file));
         for (Person person : persons) {
             writer.write(person.toString());
@@ -61,6 +61,7 @@ public class Person implements Comparable<Person>{
         }
         writer.close();
     }
+
     @Override
     public int compareTo(Person o) {
         return this.age - o.age;
@@ -73,7 +74,7 @@ public class Person implements Comparable<Person>{
                 ", age=" + age;
     }
 
-    public static void main(String[] args) throws IOException{
+    public static void main(String[] args) throws IOException {
         List<Person> adultsList = getListOfAdults(new File("lesson_54/code/homework_54/humans.txt"));
         writePersonsToFileAndPrint(adultsList, new File("lesson_54/code/homework_54/output.txt"));
     }
