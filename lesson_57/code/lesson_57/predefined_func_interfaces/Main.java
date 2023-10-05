@@ -5,22 +5,47 @@ import java.util.function.*;
 
 public class Main {
     public static void main(String[] args) {
+        //  Встроенные функциональные интерфейсы
+        // 1. Predicate ( предиката) - проверяет соблюдение некоторого условия. Возвращает true либо false  соответственно
+
+    /* методом предикаты является метод
+     public interface Predicate<T>{
+            boolean test( T t)
+    }
+     */
         Predicate<Integer> isPositive = num -> num > 0;
         System.out.println(isPositive.test(10));
         System.out.println(isPositive.test(-10));
-
+        // UnaryOperator<T> -  принимает обьект типа Т , что-то с ним делает  и возвращает обьект типа типа Т
+        /*
+        public interface UnaryOperator<T>{
+               T apply( T obj)
+        }
+         */
         UnaryOperator<Integer> unaryOperator = num -> num / 2;
         System.out.println(unaryOperator.apply(4));
-
+//      Function<T,R> -  преобразует обьект типа T  в обьект типа R
+        /*
+        Function<T,R>{
+            R apply( T obj)
+        }
+         */
         Function<Integer, String> function = String::valueOf;
         System.out.println(function.apply(10));
 
         Function<Integer, String> function1 = num -> num + " times";
         System.out.println(function1.apply(2));
-
+//      BinaryOperator<T> -  принимает два параметра типа T  , выполняет с ними операции и возвращает результат
+        // типа T
+        /*
+         T apply ( T obj1, T obj2)
+         */
         BinaryOperator<Integer> sum = Integer::sum;
         System.out.println(sum.apply(1, 2));
-
+ /*
+        Consumer<T> -  что-то делает с обьектом типа T , ничего не возвращает
+         его метод accept( T t)
+         */
         Consumer<String> consumer = System.out::println;
         consumer.accept("Hello");
 
