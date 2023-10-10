@@ -15,10 +15,14 @@ public class HWMain {
         persons.add(person1);
         persons.add(person2);
 
+        printAddresses(persons);
+
+    }
+
+    public static void printAddresses(List<Person> persons) {
         persons.stream()
                 .filter(person -> person.getAge() > 17)
                 .map(Person::getAddress)
                 .forEach(address -> System.out.println(address.getStreet() + " " + address.getHouseNumber()));
-
     }
 }
