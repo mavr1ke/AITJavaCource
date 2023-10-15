@@ -3,7 +3,6 @@ package lesson_62.datetime_api;
 import java.time.*;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
-import java.util.Iterator;
 import java.util.Set;
 
 public class Main {
@@ -99,6 +98,10 @@ public class Main {
 
         DateTimeFormatter ourFormatter = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
         localDateTime1 = LocalDateTime.now();
-        System.out.println(localDateTime1.format(ourFormatter));
+        String res = localDateTime1.format(ourFormatter);
+        System.out.println(res);
+
+        LocalDateTime localDateTime2 = LocalDateTime.parse(res,ourFormatter);
+        System.out.println(localDateTime2);
     }
 }
