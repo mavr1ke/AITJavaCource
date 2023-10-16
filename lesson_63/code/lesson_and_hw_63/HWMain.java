@@ -81,12 +81,9 @@ public class HWMain {
     }
 
     public static String namesOfPeopleOlderThan17(List<Person1> list) {
-        List<String> olderThan17Names = list.stream()
+        return list.stream()
                 .filter(person -> person.getAge() > 17)
                 .map(Person1::getName)
-                .collect(Collectors.toList());
-
-        return olderThan17Names.stream()
                 .collect(Collectors.joining(" and ", "In this list ", " are older than 17."));
     }
 
