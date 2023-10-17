@@ -58,6 +58,20 @@ public class Main {
         return count;
     }
 
+//    public static int countSubArraysWithoutNegativeElemWithMarker(int[][] ints) {
+//        int count = 0;
+//        outerFor:
+//        for (int[] row : ints) {
+//            for (int element : row) {
+//                if (element < 0) {
+//                    continue outerFor;
+//                }
+//            }
+//            count++;
+//        }
+//        return count;
+//    }
+
     /*
     Написать метод, принимающий двумерный массив целых чисел и возвращающий количество четных чисел в нем
     int[][] table = { {3,4,5},{6,7},{3,10}} -> 3
