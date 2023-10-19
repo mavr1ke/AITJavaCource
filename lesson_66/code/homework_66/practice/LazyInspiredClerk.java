@@ -26,12 +26,24 @@ public class LazyInspiredClerk extends AbstractClerk {
                                     (int) (minTime * inspirationCoef) + 1);
                     finishTime += timeToIssueCredit;
                     creditsIssued++;
+
+                    try {
+                        Thread.sleep(timeToIssueCredit); // Замедление потока на время выдачи кредита
+                    } catch (InterruptedException e) {
+                        System.out.println(e.getMessage());
+                    }
                 }
 
             } else {
                 int timeToIssueCredit = minTime + random.nextInt(maxTime - minTime + 1);
                 finishTime += timeToIssueCredit;
                 creditsIssued++;
+
+                try {
+                    Thread.sleep(timeToIssueCredit); // Замедление потока на время выдачи кредита
+                } catch (InterruptedException e) {
+                    System.out.println(e.getMessage());
+                }
             }
         }
     }

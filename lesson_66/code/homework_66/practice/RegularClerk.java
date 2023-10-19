@@ -12,6 +12,12 @@ public class RegularClerk extends AbstractClerk{
             int timeToIssueCredit = minTime + random.nextInt(maxTime - minTime + 1);
 
             finishTime += timeToIssueCredit;
+
+            try {
+                Thread.sleep(timeToIssueCredit); // Замедление потока на время выдачи кредита
+            } catch (InterruptedException e) {
+                System.out.println(e.getMessage());
+            }
         }
     }
 }
