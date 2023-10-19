@@ -1,4 +1,4 @@
-package lesson_66.practice;
+package homework_66.practice;
 
 public class RegularClerk extends AbstractClerk{
     public RegularClerk( String name, int minTime, int maxTime, int creditsNum){

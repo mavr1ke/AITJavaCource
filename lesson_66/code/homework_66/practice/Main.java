@@ -1,4 +1,4 @@
-package lesson_66.practice;
+package homework_66.practice;
 
 public class Main {
     /*

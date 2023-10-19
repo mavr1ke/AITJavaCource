@@ -1,4 +1,4 @@
-package lesson_66.practice;
+package homework_66.practice;
 
 public class LazyInspiredClerk extends AbstractClerk {
     private static final int INSPIRATION_PROBABILITY = 20; //  вероятность вдохновения
